@@ -1,12 +1,15 @@
 import React from 'react';
 import styles from './MainContent.module.css';
+import Button from '../components/Button/Button2';
 
 const MainContent: React.FC = () => {
   return (
-    <main className={styles.layout}>
-      <h1>コンタクト</h1>
-      <p>ここに自由に要素を配置できます。</p>
-    </main>
+    <div className={styles.layout}>
+      <main className={styles.main}>
+        <h1>コンタクト</h1>
+        <Button />
+      </main>
+    </div>
   );
 };
 

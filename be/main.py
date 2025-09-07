@@ -16,17 +16,17 @@ app.add_middleware(
 )
 
 # Reactのbuildフォルダを静的ファイルとしてマウント
-app.mount("/static", StaticFiles(directory="../fe/build/static"), name="static")
+app.mount("/static", StaticFiles(directory="./fe/build/static"), name="static")
 
 # index.html をトップページとして返す
 @app.get("/")
 def serve_index():
-    return FileResponse("../fe/build/index.html")
+    return FileResponse("./fe/build/index.html")
 
 # その他のすべてのパスを index.html に返す（Reactがルーティングを担当）
 @app.get("/{full_path:path}")
 def catch_all(full_path: str):
-    return FileResponse("../fe/build/index.html")
+    return FileResponse("./fe/build/index.html")
 
 @app.post("/api/button")
 async def button_event(request: Request):
