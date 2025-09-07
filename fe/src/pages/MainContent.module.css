@@ -1,0 +1,17 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 10h;
+  padding: 20px;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
